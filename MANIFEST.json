@@ -1,0 +1,14 @@
+{
+  "package": "diataxis-static-files",
+  "purpose": "Static GitHub templates and documentation files for diataxis-mcp-server",
+  "files": [
+    ".github/ISSUE_TEMPLATE/bug_report.yml",
+    ".github/ISSUE_TEMPLATE/classification_issue.yml",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/feature_request.yml",
+    ".github/pull_request_template.md",
+    "docs/how-to/release.md",
+    "examples/sample-output/README.md"
+  ],
+  "instructions": "Unzip at the repository root. Review with git diff. Run npm run build and npm test before committing."
+}

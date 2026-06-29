@@ -1,0 +1,58 @@
+{
+  "name": "diataxis-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server that helps agents apply the Diataxis framework to documentation workflows.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "diataxis-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "LICENSE",
+    "LICENSING.md",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE-CODE.md",
+    "LICENSE-CONTENT.md"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc -p tsconfig.json && npm run verify:bin",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify:bin": "node scripts/verify-bin.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "diataxis",
+    "documentation"
+  ],
+  "author": "willermo",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willermo/diataxis-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/willermo/diataxis-mcp-server/issues"
+  },
+  "homepage": "https://github.com/willermo/diataxis-mcp-server#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  }
+}

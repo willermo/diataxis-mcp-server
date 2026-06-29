@@ -1,0 +1,83 @@
+name: Feature request
+description: Suggest a new tool, resource, prompt, heuristic, schema field, or documentation improvement.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing an improvement. Please keep proposals focused and compatible with the deterministic MVP.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user or maintainer problem would this solve?
+      placeholder: Describe the workflow gap or confusing behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should change?
+      placeholder: Describe the feature, schema field, heuristic, resource, prompt, or documentation change.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - MCP tool
+        - MCP resource
+        - MCP prompt
+        - Classification heuristic
+        - Page audit
+        - Tree audit
+        - Refactor planning
+        - Documentation set planning
+        - IDE/client configuration
+        - Packaging/release
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: modes
+    attributes:
+      label: Diataxis modes involved
+      description: Select all that apply.
+      options:
+        - label: tutorial
+        - label: how-to
+        - label: reference
+        - label: explanation
+        - label: not mode-specific
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example input/output
+      description: Optional. Include a small input and the output you would expect.
+      render: json
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. What simpler alternatives or workarounds exist?
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: This proposal can be implemented without external LLM API calls.
+          required: true
+        - label: This proposal can be implemented without RAG, crawling, telemetry, or persistence.
+          required: true
+        - label: I understand new heuristics should include tests.
+          required: true

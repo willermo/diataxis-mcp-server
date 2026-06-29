@@ -1,0 +1,836 @@
+{
+  "scope": "sample",
+  "pages": [
+    {
+      "page": {
+        "title": "diataxis-mcp-server",
+        "path": "README.md"
+      },
+      "classification": {
+        "mode": "how-to",
+        "confidence": 0.61,
+        "scores": {
+          "tutorial": 0.8,
+          "how-to": 10.2,
+          "reference": 5.4,
+          "explanation": 7.8
+        },
+        "dimensions": {
+          "action": 6,
+          "cognition": 7,
+          "skillAcquisition": 4,
+          "skillApplication": 9
+        },
+        "evidence": [
+          {
+            "mode": "how-to",
+            "signal": "task guide wording",
+            "weight": 4,
+            "excerpt": "son { \"request\": \"Write a guide that shows how to configure SSO for production.\", \"title\": \"Configure SSO\", \"audience\": \"Operators who already know the product"
+          },
+          {
+            "mode": "reference",
+            "signal": "reference title or scope",
+            "weight": 4,
+            "excerpt": "tion request or draft into tutorial, how-to, reference, or explanation. - `audit_doc_page`: audit one Markdown page for mode fit, mixed-mode signals, extraction targ"
+          },
+          {
+            "mode": "explanation",
+            "signal": "conceptual title or scope",
+            "weight": 4,
+            "excerpt": "ltiple pages and summarize the documentation architecture, missing modes, dominant modes, and suggested navigation. Accepts `scope` as `full-docs`, `section`, or `sa"
+          },
+          {
+            "mode": "how-to",
+            "signal": "operational task verb",
+            "weight": 3,
+            "excerpt": "\"request\": \"Write a guide that shows how to configure SSO for production.\", \"title\": \"Configure SSO\", \"audience\": \"Operators who already know the product\" } ```"
+          },
+          {
+            "mode": "explanation",
+            "signal": "reasoning and context",
+            "weight": 3,
+            "excerpt": "rnings\": [], \"rationale\": \"Detected how-to because the strongest signals match accomplishing a practical task.\", \"suggestedStructure\": [ \"Task goal\", \"Pr"
+          },
+          {
+            "mode": "how-to",
+            "signal": "real-world variation",
+            "weight": 2,
+            "excerpt": "rite a guide that shows how to configure SSO for production.\", \"title\": \"Configure SSO\", \"audience\": \"Operators who already know the product\" } ``` Shortened ex"
+          }
+        ],
+        "warnings": [
+          "Strong secondary explanation signals suggest possible mode confusion."
+        ],
+        "rationale": "Detected how-to because the strongest signals match accomplishing a practical task. Secondary signals point to explanation, so review for mixed-mode content.",
+        "suggestedStructure": [
+          "Task goal",
+          "Prerequisites",
+          "Procedure",
+          "Verification",
+          "Related reference"
+        ]
+      },
+      "modeConfusions": [
+        {
+          "primaryMode": "how-to",
+          "confusedWith": "explanation",
+          "severity": "high",
+          "evidence": [
+            "conceptual title or scope: ltiple pages and summarize the documentation architecture, missing modes, dominant modes, and suggested navigation. Accepts `scope` as `full-docs`, `section`, or `sa",
+            "reasoning and context: rnings\": [], \"rationale\": \"Detected how-to because the strongest signals match accomplishing a practical task.\", \"suggestedStructure\": [ \"Task goal\", \"Pr"
+          ],
+          "recommendation": "Move conceptual background, rationale, and trade-offs to explanation."
+        },
+        {
+          "primaryMode": "how-to",
+          "confusedWith": "reference",
+          "severity": "low",
+          "evidence": [
+            "reference title or scope: tion request or draft into tutorial, how-to, reference, or explanation. - `audit_doc_page`: audit one Markdown page for mode fit, mixed-mode signals, extraction targ"
+          ],
+          "recommendation": "Move exact options, defaults, schemas, and API details to reference."
+        }
+      ],
+      "extractionTargets": [
+        {
+          "mode": "explanation",
+          "suggestedTitle": "diataxis-mcp-server: explained",
+          "reason": "This page has explanation signals, but its primary mode is how-to.",
+          "evidence": [
+            "conceptual title or scope: ltiple pages and summarize the documentation architecture, missing modes, dominant modes, and suggested navigation. Accepts `scope` as `full-docs`, `section`, or `sa",
+            "reasoning and context: rnings\": [], \"rationale\": \"Detected how-to because the strongest signals match accomplishing a practical task.\", \"suggestedStructure\": [ \"Task goal\", \"Pr"
+          ]
+        },
+        {
+          "mode": "reference",
+          "suggestedTitle": "diataxis-mcp-server: reference",
+          "reason": "This page has reference signals, but its primary mode is how-to.",
+          "evidence": [
+            "reference title or scope: tion request or draft into tutorial, how-to, reference, or explanation. - `audit_doc_page`: audit one Markdown page for mode fit, mixed-mode signals, extraction targ"
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "severity": "medium",
+          "message": "How-to guide has few ordered task steps.",
+          "evidence": [
+            "0 ordered steps detected"
+          ],
+          "recommendation": "Make the practical task sequence explicit."
+        },
+        {
+          "severity": "high",
+          "message": "Page has strong mixed-mode signals.",
+          "evidence": [
+            "explanation: Move conceptual background, rationale, and trade-offs to explanation.",
+            "reference: Move exact options, defaults, schemas, and API details to reference."
+          ],
+          "recommendation": "Choose one primary mode and extract the strongest secondary mode content."
+        }
+      ],
+      "nextActions": [
+        "Keep the page focused on accomplishing a practical task.",
+        "Extract explanation material into \"diataxis-mcp-server: explained\".",
+        "Extract reference material into \"diataxis-mcp-server: reference\".",
+        "Make the practical task sequence explicit.",
+        "Choose one primary mode and extract the strongest secondary mode content."
+      ]
+    },
+    {
+      "page": {
+        "title": "Contributing",
+        "path": "CONTRIBUTING.md"
+      },
+      "classification": {
+        "mode": "tutorial",
+        "confidence": 0.6,
+        "scores": {
+          "tutorial": 10.4,
+          "how-to": 8.4,
+          "reference": 5,
+          "explanation": 5
+        },
+        "dimensions": {
+          "action": 7,
+          "cognition": 5,
+          "skillAcquisition": 10,
+          "skillApplication": 7
+        },
+        "evidence": [
+          {
+            "mode": "tutorial",
+            "signal": "guided lesson wording",
+            "weight": 4,
+            "excerpt": "des distinct: * tutorial: learning-oriented guided lesson; * how-to guide: goal-oriented practical task; * reference: information-oriented description of machinery;"
+          },
+          {
+            "mode": "how-to",
+            "signal": "task guide wording",
+            "weight": 4,
+            "excerpt": "guided lesson; * how-to guide: goal-oriented practical task; * reference: information-oriented description of machinery; * explanation: understanding-oriented concep"
+          },
+          {
+            "mode": "reference",
+            "signal": "reference title or scope",
+            "weight": 4,
+            "excerpt": "ow-to guide: goal-oriented practical task; * reference: information-oriented description of machinery; * explanation: understanding-oriented conceptual discussion."
+          },
+          {
+            "mode": "explanation",
+            "signal": "conceptual title or scope",
+            "weight": 4,
+            "excerpt": "n; * the expected mode; * the actual mode; * why the current result is confusing or unhelpful. ## Security Do not report security issues in public issues if they c"
+          },
+          {
+            "mode": "tutorial",
+            "signal": "learner audience",
+            "weight": 3,
+            "excerpt": "CP client configuration problems; * proposed new tools or resources; * Diátaxis interpretation questions. When reporting a classification or audit issue, include:"
+          },
+          {
+            "mode": "how-to",
+            "signal": "operational task verb",
+            "weight": 3,
+            "excerpt": "le with CC-BY-SA 4.0. ## Development setup Install dependencies: ```sh npm install ``` Run tests: ```sh npm test ``` Run the build: ```sh npm run build ``` R"
+          },
+          {
+            "mode": "tutorial",
+            "signal": "expected-result checks",
+            "weight": 2,
+            "excerpt": "2 verification cues"
+          }
+        ],
+        "warnings": [
+          "Strong secondary how-to signals suggest possible mode confusion."
+        ],
+        "rationale": "Detected tutorial because the strongest signals match learning through a guided lesson. Secondary signals point to how-to, so review for mixed-mode content.",
+        "suggestedStructure": [
+          "Learning goal",
+          "Prerequisites",
+          "Guided steps",
+          "Expected results",
+          "Recap and next practice"
+        ]
+      },
+      "modeConfusions": [
+        {
+          "primaryMode": "tutorial",
+          "confusedWith": "how-to",
+          "severity": "high",
+          "evidence": [
+            "task guide wording: guided lesson; * how-to guide: goal-oriented practical task; * reference: information-oriented description of machinery; * explanation: understanding-oriented concep",
+            "operational task verb: le with CC-BY-SA 4.0. ## Development setup Install dependencies: ```sh npm install ``` Run tests: ```sh npm test ``` Run the build: ```sh npm run build ``` R"
+          ],
+          "recommendation": "Move real-world task steps to a how-to guide."
+        },
+        {
+          "primaryMode": "tutorial",
+          "confusedWith": "reference",
+          "severity": "low",
+          "evidence": [
+            "reference title or scope: ow-to guide: goal-oriented practical task; * reference: information-oriented description of machinery; * explanation: understanding-oriented conceptual discussion."
+          ],
+          "recommendation": "Move exact options, defaults, schemas, and API details to reference."
+        },
+        {
+          "primaryMode": "tutorial",
+          "confusedWith": "explanation",
+          "severity": "low",
+          "evidence": [
+            "conceptual title or scope: n; * the expected mode; * the actual mode; * why the current result is confusing or unhelpful. ## Security Do not report security issues in public issues if they c"
+          ],
+          "recommendation": "Move conceptual background, rationale, and trade-offs to explanation."
+        }
+      ],
+      "extractionTargets": [
+        {
+          "mode": "how-to",
+          "suggestedTitle": "Contributing: how-to guide",
+          "reason": "This page has how-to signals, but its primary mode is tutorial.",
+          "evidence": [
+            "task guide wording: guided lesson; * how-to guide: goal-oriented practical task; * reference: information-oriented description of machinery; * explanation: understanding-oriented concep",
+            "operational task verb: le with CC-BY-SA 4.0. ## Development setup Install dependencies: ```sh npm install ``` Run tests: ```sh npm test ``` Run the build: ```sh npm run build ``` R"
+          ]
+        },
+        {
+          "mode": "reference",
+          "suggestedTitle": "Contributing: reference",
+          "reason": "This page has reference signals, but its primary mode is tutorial.",
+          "evidence": [
+            "reference title or scope: ow-to guide: goal-oriented practical task; * reference: information-oriented description of machinery; * explanation: understanding-oriented conceptual discussion."
+          ]
+        },
+        {
+          "mode": "explanation",
+          "suggestedTitle": "Contributing: explained",
+          "reason": "This page has explanation signals, but its primary mode is tutorial.",
+          "evidence": [
+            "conceptual title or scope: n; * the expected mode; * the actual mode; * why the current result is confusing or unhelpful. ## Security Do not report security issues in public issues if they c"
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "severity": "high",
+          "message": "Page has strong mixed-mode signals.",
+          "evidence": [
+            "how-to: Move real-world task steps to a how-to guide.",
+            "reference: Move exact options, defaults, schemas, and API details to reference.",
+            "explanation: Move conceptual background, rationale, and trade-offs to explanation."
+          ],
+          "recommendation": "Choose one primary mode and extract the strongest secondary mode content."
+        }
+      ],
+      "nextActions": [
+        "Keep the page focused on learning through a guided lesson.",
+        "Extract how-to material into \"Contributing: how-to guide\".",
+        "Extract reference material into \"Contributing: reference\".",
+        "Choose one primary mode and extract the strongest secondary mode content."
+      ]
+    },
+    {
+      "page": {
+        "title": "Security Policy",
+        "path": "SECURITY.md"
+      },
+      "classification": {
+        "mode": "reference",
+        "confidence": 0.89,
+        "scores": {
+          "tutorial": 0,
+          "how-to": 0,
+          "reference": 4.4,
+          "explanation": 0
+        },
+        "dimensions": {
+          "action": 0,
+          "cognition": 2,
+          "skillAcquisition": 0,
+          "skillApplication": 3
+        },
+        "evidence": [
+          {
+            "mode": "reference",
+            "signal": "reference title or scope",
+            "weight": 4,
+            "excerpt": "entation or examples that encourage insecure configuration. The server should not perform hidden file writes, network calls, telemetry, persistence, crawling, or de"
+          }
+        ],
+        "warnings": [],
+        "rationale": "Detected reference because the strongest signals match looking up exact facts while working.",
+        "suggestedStructure": [
+          "Scope",
+          "Syntax or schema",
+          "Parameters and defaults",
+          "Return values or outputs",
+          "Errors and constraints"
+        ]
+      },
+      "modeConfusions": [],
+      "extractionTargets": [],
+      "findings": [
+        {
+          "severity": "low",
+          "message": "Reference page may not be structured enough for lookup.",
+          "evidence": [
+            "0 table lines, 0 option-like lines"
+          ],
+          "recommendation": "Use stable headings, tables, lists, and field descriptions."
+        }
+      ],
+      "nextActions": [
+        "Keep the page focused on looking up exact facts while working.",
+        "Use stable headings, tables, lists, and field descriptions."
+      ]
+    },
+    {
+      "page": {
+        "title": "Licensing",
+        "path": "LICENSING.md"
+      },
+      "classification": {
+        "mode": "reference",
+        "confidence": 0.89,
+        "scores": {
+          "tutorial": 0,
+          "how-to": 0,
+          "reference": 4.4,
+          "explanation": 0
+        },
+        "dimensions": {
+          "action": 0,
+          "cognition": 2,
+          "skillAcquisition": 0,
+          "skillApplication": 3
+        },
+        "evidence": [
+          {
+            "mode": "reference",
+            "signal": "reference title or scope",
+            "weight": 4,
+            "excerpt": "ory uses a split license model. Code, build configuration, package metadata, and tests are licensed under Apache License 2.0. See `LICENSE` for the full license tex"
+          }
+        ],
+        "warnings": [],
+        "rationale": "Detected reference because the strongest signals match looking up exact facts while working.",
+        "suggestedStructure": [
+          "Scope",
+          "Syntax or schema",
+          "Parameters and defaults",
+          "Return values or outputs",
+          "Errors and constraints"
+        ]
+      },
+      "modeConfusions": [],
+      "extractionTargets": [],
+      "findings": [
+        {
+          "severity": "low",
+          "message": "Reference page may not be structured enough for lookup.",
+          "evidence": [
+            "0 table lines, 1 option-like lines"
+          ],
+          "recommendation": "Use stable headings, tables, lists, and field descriptions."
+        }
+      ],
+      "nextActions": [
+        "Keep the page focused on looking up exact facts while working.",
+        "Use stable headings, tables, lists, and field descriptions."
+      ]
+    },
+    {
+      "page": {
+        "title": "Notices and Attribution",
+        "path": "NOTICE.md"
+      },
+      "classification": {
+        "mode": "reference",
+        "confidence": 0.89,
+        "scores": {
+          "tutorial": 0,
+          "how-to": 0,
+          "reference": 4.4,
+          "explanation": 0
+        },
+        "dimensions": {
+          "action": 0,
+          "cognition": 2,
+          "skillAcquisition": 0,
+          "skillApplication": 3
+        },
+        "evidence": [
+          {
+            "mode": "reference",
+            "signal": "reference title or scope",
+            "weight": 4,
+            "excerpt": "nd content. - TypeScript source code, build configuration, package metadata, and tests are licensed under Apache-2.0. See `LICENSE-CODE.md`. - Documentation, exampl"
+          }
+        ],
+        "warnings": [],
+        "rationale": "Detected reference because the strongest signals match looking up exact facts while working.",
+        "suggestedStructure": [
+          "Scope",
+          "Syntax or schema",
+          "Parameters and defaults",
+          "Return values or outputs",
+          "Errors and constraints"
+        ]
+      },
+      "modeConfusions": [],
+      "extractionTargets": [],
+      "findings": [
+        {
+          "severity": "low",
+          "message": "Reference page may not be structured enough for lookup.",
+          "evidence": [
+            "0 table lines, 0 option-like lines"
+          ],
+          "recommendation": "Use stable headings, tables, lists, and field descriptions."
+        }
+      ],
+      "nextActions": [
+        "Keep the page focused on looking up exact facts while working.",
+        "Use stable headings, tables, lists, and field descriptions."
+      ]
+    },
+    {
+      "page": {
+        "title": "Codex MCP configuration example",
+        "path": "examples/codex/README.md"
+      },
+      "classification": {
+        "mode": "reference",
+        "confidence": 0.89,
+        "scores": {
+          "tutorial": 0,
+          "how-to": 0,
+          "reference": 4.4,
+          "explanation": 0
+        },
+        "dimensions": {
+          "action": 0,
+          "cognition": 2,
+          "skillAcquisition": 0,
+          "skillApplication": 3
+        },
+        "evidence": [
+          {
+            "mode": "reference",
+            "signal": "reference title or scope",
+            "weight": 4,
+            "excerpt": "Title: Codex MCP configuration example Request: Audit documentation page: Codex MCP configuration example Content: # Codex MCP configur"
+          }
+        ],
+        "warnings": [],
+        "rationale": "Detected reference because the strongest signals match looking up exact facts while working.",
+        "suggestedStructure": [
+          "Scope",
+          "Syntax or schema",
+          "Parameters and defaults",
+          "Return values or outputs",
+          "Errors and constraints"
+        ]
+      },
+      "modeConfusions": [],
+      "extractionTargets": [],
+      "findings": [
+        {
+          "severity": "low",
+          "message": "Reference page may not be structured enough for lookup.",
+          "evidence": [
+            "0 table lines, 0 option-like lines"
+          ],
+          "recommendation": "Use stable headings, tables, lists, and field descriptions."
+        }
+      ],
+      "nextActions": [
+        "Keep the page focused on looking up exact facts while working.",
+        "Use stable headings, tables, lists, and field descriptions."
+      ]
+    },
+    {
+      "page": {
+        "title": "Antigravity MCP configuration example",
+        "path": "examples/antigravity/README.md"
+      },
+      "classification": {
+        "mode": "reference",
+        "confidence": 0.89,
+        "scores": {
+          "tutorial": 0,
+          "how-to": 0,
+          "reference": 4.4,
+          "explanation": 0
+        },
+        "dimensions": {
+          "action": 0,
+          "cognition": 2,
+          "skillAcquisition": 0,
+          "skillApplication": 3
+        },
+        "evidence": [
+          {
+            "mode": "reference",
+            "signal": "reference title or scope",
+            "weight": 4,
+            "excerpt": "Title: Antigravity MCP configuration example Request: Audit documentation page: Antigravity MCP configuration example Content: # Antigravity"
+          }
+        ],
+        "warnings": [],
+        "rationale": "Detected reference because the strongest signals match looking up exact facts while working.",
+        "suggestedStructure": [
+          "Scope",
+          "Syntax or schema",
+          "Parameters and defaults",
+          "Return values or outputs",
+          "Errors and constraints"
+        ]
+      },
+      "modeConfusions": [],
+      "extractionTargets": [],
+      "findings": [
+        {
+          "severity": "low",
+          "message": "Reference page may not be structured enough for lookup.",
+          "evidence": [
+            "0 table lines, 0 option-like lines"
+          ],
+          "recommendation": "Use stable headings, tables, lists, and field descriptions."
+        }
+      ],
+      "nextActions": [
+        "Keep the page focused on looking up exact facts while working.",
+        "Use stable headings, tables, lists, and field descriptions."
+      ]
+    },
+    {
+      "page": {
+        "title": "Diátaxis Operational Summary for Agents",
+        "path": "references/diataxis/diataxis-operational-summary.md"
+      },
+      "classification": {
+        "mode": "tutorial",
+        "confidence": 0.56,
+        "scores": {
+          "tutorial": 17.1,
+          "how-to": 15.6,
+          "reference": 16.7,
+          "explanation": 12.2
+        },
+        "dimensions": {
+          "action": 13,
+          "cognition": 18,
+          "skillAcquisition": 16,
+          "skillApplication": 13.5
+        },
+        "evidence": [
+          {
+            "mode": "reference",
+            "signal": "structured facts",
+            "weight": 5,
+            "excerpt": "12 table lines, 3 option-like lines"
+          },
+          {
+            "mode": "tutorial",
+            "signal": "guided lesson wording",
+            "weight": 4,
+            "excerpt": "al language patterns Use patterns like: * “In this tutorial, we will...” * “First, do...” * “Now, do...” * “You should see...” * “Notice that...” * “Let’s check..."
+          },
+          {
+            "mode": "how-to",
+            "signal": "task guide wording",
+            "weight": 4,
+            "excerpt": "Use patterns like: * “This guide shows you how to...” * “To achieve X, do Y.” * “If you need X, use Y.” * “In this case, choose...” * “Refer to the reference page"
+          },
+          {
+            "mode": "reference",
+            "signal": "reference title or scope",
+            "weight": 4,
+            "excerpt": "| Goal-oriented | | Information | Reference | Information-oriented | | Understanding | Explanation | Understanding-oriented | The centr"
+          },
+          {
+            "mode": "explanation",
+            "signal": "conceptual title or scope",
+            "weight": 4,
+            "excerpt": "e an immediate task. ### Primary question “Why does this work this way?” or “Can you help me understand this?” ### Good explanation characteristics Good explanat"
+          },
+          {
+            "mode": "how-to",
+            "signal": "ordered procedural steps",
+            "weight": 4,
+            "excerpt": "44 ordered steps"
+          },
+          {
+            "mode": "tutorial",
+            "signal": "learner audience",
+            "weight": 3,
+            "excerpt": "iguration tables; * introductory lessons for beginners. ### How-to red flags A page may not be a good how-to guide if it: * has no concrete task; * is organized a"
+          },
+          {
+            "mode": "how-to",
+            "signal": "operational task verb",
+            "weight": 3,
+            "excerpt": ", \"how_to_guides\": [ { \"title\": \"Configure authentication\", \"purpose\": \"Help users complete a common setup task.\" } ], \"reference\": [ {"
+          },
+          {
+            "mode": "reference",
+            "signal": "exact machinery details",
+            "weight": 3,
+            "excerpt": "while working. The user needs facts, names, parameters, schemas, APIs, commands, constraints, defaults, return values, errors, or configuration options. ### Primar"
+          },
+          {
+            "mode": "explanation",
+            "signal": "reasoning and context",
+            "weight": 3,
+            "excerpt": "r this is...” * “This design favors X over Y because...” * “A useful way to think about this is...” * “Compared with...” * “This trade-off matters when...” * “Histor"
+          }
+        ],
+        "warnings": [
+          "Strong secondary reference signals suggest possible mode confusion."
+        ],
+        "rationale": "Detected tutorial because the strongest signals match learning through a guided lesson. Secondary signals point to reference, so review for mixed-mode content.",
+        "suggestedStructure": [
+          "Learning goal",
+          "Prerequisites",
+          "Guided steps",
+          "Expected results",
+          "Recap and next practice"
+        ]
+      },
+      "modeConfusions": [
+        {
+          "primaryMode": "tutorial",
+          "confusedWith": "reference",
+          "severity": "high",
+          "evidence": [
+            "structured facts: 12 table lines, 3 option-like lines",
+            "reference title or scope: | Goal-oriented | | Information | Reference | Information-oriented | | Understanding | Explanation | Understanding-oriented | The centr",
+            "exact machinery details: while working. The user needs facts, names, parameters, schemas, APIs, commands, constraints, defaults, return values, errors, or configuration options. ### Primar"
+          ],
+          "recommendation": "Move exact options, defaults, schemas, and API details to reference."
+        },
+        {
+          "primaryMode": "tutorial",
+          "confusedWith": "how-to",
+          "severity": "high",
+          "evidence": [
+            "task guide wording: Use patterns like: * “This guide shows you how to...” * “To achieve X, do Y.” * “If you need X, use Y.” * “In this case, choose...” * “Refer to the reference page",
+            "ordered procedural steps: 44 ordered steps",
+            "operational task verb: , \"how_to_guides\": [ { \"title\": \"Configure authentication\", \"purpose\": \"Help users complete a common setup task.\" } ], \"reference\": [ {"
+          ],
+          "recommendation": "Move real-world task steps to a how-to guide."
+        },
+        {
+          "primaryMode": "tutorial",
+          "confusedWith": "explanation",
+          "severity": "medium",
+          "evidence": [
+            "conceptual title or scope: e an immediate task. ### Primary question “Why does this work this way?” or “Can you help me understand this?” ### Good explanation characteristics Good explanat",
+            "reasoning and context: r this is...” * “This design favors X over Y because...” * “A useful way to think about this is...” * “Compared with...” * “This trade-off matters when...” * “Histor"
+          ],
+          "recommendation": "Move conceptual background, rationale, and trade-offs to explanation."
+        }
+      ],
+      "extractionTargets": [
+        {
+          "mode": "reference",
+          "suggestedTitle": "Diátaxis Operational Summary for Agents: reference",
+          "reason": "This page has reference signals, but its primary mode is tutorial.",
+          "evidence": [
+            "structured facts: 12 table lines, 3 option-like lines",
+            "reference title or scope: | Goal-oriented | | Information | Reference | Information-oriented | | Understanding | Explanation | Understanding-oriented | The centr",
+            "exact machinery details: while working. The user needs facts, names, parameters, schemas, APIs, commands, constraints, defaults, return values, errors, or configuration options. ### Primar"
+          ]
+        },
+        {
+          "mode": "how-to",
+          "suggestedTitle": "Diátaxis Operational Summary for Agents: how-to guide",
+          "reason": "This page has how-to signals, but its primary mode is tutorial.",
+          "evidence": [
+            "task guide wording: Use patterns like: * “This guide shows you how to...” * “To achieve X, do Y.” * “If you need X, use Y.” * “In this case, choose...” * “Refer to the reference page",
+            "ordered procedural steps: 44 ordered steps",
+            "operational task verb: , \"how_to_guides\": [ { \"title\": \"Configure authentication\", \"purpose\": \"Help users complete a common setup task.\" } ], \"reference\": [ {"
+          ]
+        },
+        {
+          "mode": "explanation",
+          "suggestedTitle": "Diátaxis Operational Summary for Agents: explained",
+          "reason": "This page has explanation signals, but its primary mode is tutorial.",
+          "evidence": [
+            "conceptual title or scope: e an immediate task. ### Primary question “Why does this work this way?” or “Can you help me understand this?” ### Good explanation characteristics Good explanat",
+            "reasoning and context: r this is...” * “This design favors X over Y because...” * “A useful way to think about this is...” * “Compared with...” * “This trade-off matters when...” * “Histor"
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "severity": "high",
+          "message": "Page has strong mixed-mode signals.",
+          "evidence": [
+            "reference: Move exact options, defaults, schemas, and API details to reference.",
+            "how-to: Move real-world task steps to a how-to guide.",
+            "explanation: Move conceptual background, rationale, and trade-offs to explanation."
+          ],
+          "recommendation": "Choose one primary mode and extract the strongest secondary mode content."
+        }
+      ],
+      "nextActions": [
+        "Keep the page focused on learning through a guided lesson.",
+        "Extract reference material into \"Diátaxis Operational Summary for Agents: reference\".",
+        "Extract how-to material into \"Diátaxis Operational Summary for Agents: how-to guide\".",
+        "Choose one primary mode and extract the strongest secondary mode content."
+      ]
+    }
+  ],
+  "summary": {
+    "totalPages": 8,
+    "modeCounts": {
+      "tutorial": 2,
+      "how-to": 1,
+      "reference": 5,
+      "explanation": 0
+    },
+    "averageConfidence": 0.78,
+    "pagesWithConfusion": 3
+  },
+  "missingModes": [
+    "explanation"
+  ],
+  "dominantModes": [
+    "reference"
+  ],
+  "coverageWarnings": [
+    "This sample does not include explanation pages; do not treat this as full documentation coverage.",
+    "This sample is dominated by reference pages; do not treat this as full documentation architecture.",
+    "3 page(s) in this sample have mixed-mode signals."
+  ],
+  "suggestedNavigation": [
+    {
+      "mode": "tutorial",
+      "pages": [
+        {
+          "title": "Contributing",
+          "path": "CONTRIBUTING.md",
+          "confidence": 0.6
+        },
+        {
+          "title": "Diátaxis Operational Summary for Agents",
+          "path": "references/diataxis/diataxis-operational-summary.md",
+          "confidence": 0.56
+        }
+      ]
+    },
+    {
+      "mode": "how-to",
+      "pages": [
+        {
+          "title": "diataxis-mcp-server",
+          "path": "README.md",
+          "confidence": 0.61
+        }
+      ]
+    },
+    {
+      "mode": "reference",
+      "pages": [
+        {
+          "title": "Security Policy",
+          "path": "SECURITY.md",
+          "confidence": 0.89
+        },
+        {
+          "title": "Licensing",
+          "path": "LICENSING.md",
+          "confidence": 0.89
+        },
+        {
+          "title": "Notices and Attribution",
+          "path": "NOTICE.md",
+          "confidence": 0.89
+        },
+        {
+          "title": "Codex MCP configuration example",
+          "path": "examples/codex/README.md",
+          "confidence": 0.89
+        },
+        {
+          "title": "Antigravity MCP configuration example",
+          "path": "examples/antigravity/README.md",
+          "confidence": 0.89
+        }
+      ]
+    },
+    {
+      "mode": "explanation",
+      "pages": []
+    }
+  ],
+  "nextActions": [
+    "Review 3 sampled page(s) with mixed-mode signals before applying any refactor.",
+    "Review low-confidence classifications within this sample.",
+    "Group audited pages by primary Diataxis mode for this sample.",
+    "Treat missing explanation coverage as sample-only unless a full-docs audit confirms it."
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "objective": "Dogfood the MVP against the repository documentation.",
+  "actions": [
+    {
+      "priority": "high",
+      "operation": "review",
+      "pageTitle": "diataxis-mcp-server",
+      "pagePath": "README.md",
+      "sourcePath": "README.md",
+      "action": "Choose one primary mode and extract the strongest secondary mode content.",
+      "targetMode": "how-to",
+      "reason": "Page has strong mixed-mode signals."
+    },
+    {
+      "priority": "medium",
+      "operation": "extract",
+      "pageTitle": "diataxis-mcp-server",
+      "pagePath": "README.md",
+      "sourcePath": "README.md",
+      "targetPath": "docs/explanation/diataxis-mcp-server-explained.md",
+      "targetTitle": "diataxis-mcp-server: explained",
+      "action": "Extract explanation material into \"diataxis-mcp-server: explained\".",
+      "targetMode": "explanation",
+      "reason": "This page has explanation signals, but its primary mode is how-to."
+    },
+    {
+      "priority": "medium",
+      "operation": "extract",
+      "pageTitle": "diataxis-mcp-server",
+      "pagePath": "README.md",
+      "sourcePath": "README.md",
+      "targetPath": "docs/reference/diataxis-mcp-server-reference.md",
+      "targetTitle": "diataxis-mcp-server: reference",
+      "action": "Extract reference material into \"diataxis-mcp-server: reference\".",
+      "targetMode": "reference",
+      "reason": "This page has reference signals, but its primary mode is how-to."
+    },
+    {
+      "priority": "high",
+      "operation": "review",
+      "pageTitle": "Contributing",
+      "pagePath": "CONTRIBUTING.md",
+      "sourcePath": "CONTRIBUTING.md",
+      "action": "Choose one primary mode and extract the strongest secondary mode content.",
+      "targetMode": "tutorial",
+      "reason": "Page has strong mixed-mode signals."
+    },
+    {
+      "priority": "medium",
+      "operation": "extract",
+      "pageTitle": "Contributing",
+      "pagePath": "CONTRIBUTING.md",
+      "sourcePath": "CONTRIBUTING.md",
+      "targetPath": "docs/how-to/contributing-how-to-guide.md",
+      "targetTitle": "Contributing: how-to guide",
+      "action": "Extract how-to material into \"Contributing: how-to guide\".",
+      "targetMode": "how-to",
+      "reason": "This page has how-to signals, but its primary mode is tutorial."
+    },
+    {
+      "priority": "medium",
+      "operation": "extract",
+      "pageTitle": "Contributing",
+      "pagePath": "CONTRIBUTING.md",
+      "sourcePath": "CONTRIBUTING.md",
+      "targetPath": "docs/reference/contributing-reference.md",
+      "targetTitle": "Contributing: reference",
+      "action": "Extract reference material into \"Contributing: reference\".",
+      "targetMode": "reference",
+      "reason": "This page has reference signals, but its primary mode is tutorial."
+    },
+    {
+      "priority": "medium",
+      "operation": "extract",
+      "pageTitle": "Contributing",
+      "pagePath": "CONTRIBUTING.md",
+      "sourcePath": "CONTRIBUTING.md",
+      "targetPath": "docs/explanation/contributing-explained.md",
+      "targetTitle": "Contributing: explained",
+      "action": "Extract explanation material into \"Contributing: explained\".",
+      "targetMode": "explanation",
+      "reason": "This page has explanation signals, but its primary mode is tutorial."
+    },
+    {
+      "priority": "high",
+      "operation": "review",
+      "pageTitle": "Diátaxis Operational Summary for Agents",
+      "pagePath": "references/diataxis/diataxis-operational-summary.md",
+      "sourcePath": "references/diataxis/diataxis-operational-summary.md",
+      "action": "Choose one primary mode and extract the strongest secondary mode content.",
+      "targetMode": "tutorial",
+      "reason": "Page has strong mixed-mode signals."
+    },
+    {
+      "priority": "medium",
+      "operation": "extract",
+      "pageTitle": "Diátaxis Operational Summary for Agents",
+      "pagePath": "references/diataxis/diataxis-operational-summary.md",
+      "sourcePath": "references/diataxis/diataxis-operational-summary.md",
+      "targetPath": "docs/reference/diataxis-operational-summary-for-agents-reference.md",
+      "targetTitle": "Diátaxis Operational Summary for Agents: reference",
+      "action": "Extract reference material into \"Diátaxis Operational Summary for Agents: reference\".",
+      "targetMode": "reference",
+      "reason": "This page has reference signals, but its primary mode is tutorial."
+    },
+    {
+      "priority": "medium",
+      "operation": "extract",
+      "pageTitle": "Diátaxis Operational Summary for Agents",
+      "pagePath": "references/diataxis/diataxis-operational-summary.md",
+      "sourcePath": "references/diataxis/diataxis-operational-summary.md",
+      "targetPath": "docs/how-to/diataxis-operational-summary-for-agents-how-to-guide.md",
+      "targetTitle": "Diátaxis Operational Summary for Agents: how-to guide",
+      "action": "Extract how-to material into \"Diátaxis Operational Summary for Agents: how-to guide\".",
+      "targetMode": "how-to",
+      "reason": "This page has how-to signals, but its primary mode is tutorial."
+    },
+    {
+      "priority": "medium",
+      "operation": "extract",
+      "pageTitle": "Diátaxis Operational Summary for Agents",
+      "pagePath": "references/diataxis/diataxis-operational-summary.md",
+      "sourcePath": "references/diataxis/diataxis-operational-summary.md",
+      "targetPath": "docs/explanation/diataxis-operational-summary-for-agents-explained.md",
+      "targetTitle": "Diátaxis Operational Summary for Agents: explained",
+      "action": "Extract explanation material into \"Diátaxis Operational Summary for Agents: explained\".",
+      "targetMode": "explanation",
+      "reason": "This page has explanation signals, but its primary mode is tutorial."
+    }
+  ],
+  "sequence": [
+    "Confirm the primary mode for each page.",
+    "Apply high-priority mode corrections first.",
+    "Extract secondary material into new pages.",
+    "Replace extracted sections with links."
+  ]
+}

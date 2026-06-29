@@ -1,0 +1,107 @@
+name: Bug report
+description: Report a reproducible bug in the MCP server, package, CLI, or documentation.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please include enough detail for maintainers to reproduce the problem.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong?
+      placeholder: Describe the bug clearly and briefly.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the project is affected?
+      options:
+        - MCP server
+        - MCP tool schema
+        - Classification heuristics
+        - Page audit
+        - Tree audit
+        - Refactor planning
+        - Documentation set planning
+        - IDE/client configuration
+        - Packaging or npm
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide a minimal, repeatable reproduction.
+      placeholder: |
+        1. Run ...
+        2. Call tool ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: input
+    attributes:
+      label: Minimal input or payload
+      description: Include the smallest Markdown sample, JSON payload, or configuration that reproduces the issue.
+      render: json
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error output
+      description: Paste relevant logs. Remove secrets, tokens, private paths, and sensitive data.
+      render: shell
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      placeholder: "20.x, 22.x, etc."
+
+  - type: input
+    id: client
+    attributes:
+      label: MCP client or IDE
+      placeholder: "Codex, Antigravity, Claude Desktop, VS Code extension, other"
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Linux, macOS, Windows, WSL, etc."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I removed secrets, tokens, private paths, and sensitive data.
+          required: true
+        - label: I checked whether this is already reported.
+          required: true

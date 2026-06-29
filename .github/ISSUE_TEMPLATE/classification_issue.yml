@@ -1,0 +1,101 @@
+name: Classification issue
+description: Report a confusing or incorrect Diataxis classification, audit, or refactor recommendation.
+title: "[Classification]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when the server classifies a documentation request/page in a confusing way,
+        detects mode confusion incorrectly, or produces an unhelpful refactor recommendation.
+
+  - type: input
+    id: page-title
+    attributes:
+      label: Page or request title
+      placeholder: "Configure SSO, Widget API reference, Getting started, etc."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Tool involved
+      options:
+        - classify_doc_request
+        - audit_doc_page
+        - audit_doc_tree
+        - suggest_doc_refactor
+        - plan_doc_set
+        - Unknown / not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: actual-mode
+    attributes:
+      label: Actual mode reported
+      options:
+        - tutorial
+        - how-to
+        - reference
+        - explanation
+        - mixed / multiple
+        - unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: expected-mode
+    attributes:
+      label: Expected mode
+      options:
+        - tutorial
+        - how-to
+        - reference
+        - explanation
+        - mixed / multiple
+        - unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: markdown-input
+    attributes:
+      label: Minimal Markdown or request input
+      description: Provide the smallest input that demonstrates the issue. Remove private data.
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Actual JSON output
+      description: Paste the relevant output if available.
+      render: json
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is the current result unhelpful?
+      description: Explain the user need and why another Diataxis mode or recommendation would be better.
+      placeholder: |
+        The user is already competent and wants to accomplish a task, so this should be how-to rather than tutorial.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested heuristic or fixture
+      description: Optional. Suggest wording, signals, or a test fixture that could improve the behavior.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I understand Diataxis classification is heuristic and advisory in this MVP.
+          required: true
+        - label: I removed secrets, private code, private paths, and sensitive data.
+          required: true
